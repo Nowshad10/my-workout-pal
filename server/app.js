@@ -4,9 +4,9 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the My Workout Pal API.')
-});
+const workoutRoutes = require('./routes/workouts');
+
+app.use('/workouts', workoutRoutes);
 
 module.exports = app;
 
