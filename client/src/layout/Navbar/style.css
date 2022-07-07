@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+#main-title {
+    font-family: 'Caveat';
+}
+
+header {
+    background: #fff;
+}
+  
+header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+header a {
+    color: #333;
+    text-decoration: none;
+}
