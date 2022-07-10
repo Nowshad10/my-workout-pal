@@ -16,3 +16,9 @@ body {
   padding: 20px;
   margin: 0 auto;
 }
+
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
