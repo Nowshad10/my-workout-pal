@@ -28,7 +28,7 @@
     color: #555;
 }
 
-/* .workout-details span {
+.delete-btn {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -37,4 +37,4 @@
     padding: 6px;
     border-radius: 50%;
     color: #333;
-} */
+}
