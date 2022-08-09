@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 #main-title {
     font-family: 'Caveat';
@@ -29,4 +30,16 @@ nav {
 
 nav a {
     margin-left: 10px;
+}
+
+#logout-btn {
+    background: white;
+    color: #1aac83;
+    border: 2px solid #1aac83;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: 'Nunito Sans', sans-serif;
+    cursor: pointer;
+    font-size: 1em;
+    display: inline;
 }
