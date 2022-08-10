@@ -12,6 +12,7 @@ const Navbar = () => {
     logout();
   }
   return (
+    <>
     <header>
         <div className='container'>
             <Link to='/'>
@@ -21,7 +22,7 @@ const Navbar = () => {
               <div>
                 { user && (
                 <>
-                  <span>{user.email}</span>
+                  {/* <span>{user.user.username}</span> */}
                   <button id='logout-btn' onClick={handleLogout}>Logout
                   </button>
                 </>
@@ -36,6 +37,7 @@ const Navbar = () => {
             </nav>
         </div>
     </header>
+    </>
   );
 };
 
