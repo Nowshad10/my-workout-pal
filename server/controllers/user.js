@@ -17,11 +17,12 @@ async function register(req, res) {
 };
 
 async function login(req, res) {
-    const {username, password} = req.body;
+    const {email, password} = req.body;
     try {
-        const user = await User.login(username, password);
+        const user = await User.login(email, password);
         const token = createToken(user._id);
-        res.status(200).json({username, token});
+        // console.log(user.username)
+        res.status(200).json(user);
     } catch (error) {
         res.status(400).json({error: error.message});
     };

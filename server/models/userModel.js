@@ -50,12 +50,12 @@ userSchema.statics.register = async function (username, email, password) {
     return user;
 };
 
-userSchema.statics.login = async function (username, password) {
-    if (!username || !password) {
+userSchema.statics.login = async function (email, password) {
+    if (!email || !password) {
         throw Error('All fields must be filled!');
     };
 
-    const user = await this.findOne({ username });
+    const user = await this.findOne({ email });
 
     if (!user) {
         throw Error('User does not exist.')

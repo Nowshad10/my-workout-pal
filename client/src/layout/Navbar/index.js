@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import { Icon } from '@iconify/react';
 import { useLogout } from '../../hooks/useLogout';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 const Navbar = () => {
   const { logout } = useLogout();
+  const { user } = useAuthContext();
   const handleLogout = () => {
     logout();
   }
@@ -17,9 +19,19 @@ const Navbar = () => {
             </Link>
             <nav>
               <div>
-                <button id='logout-btn' onClick={handleLogout}>Logout</button>
-                <Link to='/login'>Login</Link>
-                <Link to='/register'>Register</Link>
+                { user && (
+                <>
+                  <span>{user.email}</span>
+                  <button id='logout-btn' onClick={handleLogout}>Logout
+                  </button>
+                </>
+                ) }
+                { !user && (
+                <div>
+                  <Link to='/login'>Login</Link>
+                  <Link to='/register'>Register</Link>
+                </div>
+                )}
               </div>
             </nav>
         </div>
