@@ -41,5 +41,5 @@ nav a {
     font-family: 'Nunito Sans', sans-serif;
     cursor: pointer;
     font-size: 1em;
-    display: inline;
+    margin-left: 10px;
 }
